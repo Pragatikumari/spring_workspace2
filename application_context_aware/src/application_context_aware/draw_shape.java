@@ -9,7 +9,7 @@ public class draw_shape {
 
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-	       Triangle triangle= (Triangle)context.getBean("triangle");
+	       Triangle triangle= (Triangle)context.getBean(Triangle.class);
 	       triangle.draw();
 
 	}
