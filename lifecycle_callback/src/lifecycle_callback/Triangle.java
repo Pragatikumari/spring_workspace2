@@ -3,14 +3,14 @@ package lifecycle_callback;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
-public class Triangle   {
+public class Triangle implements InitializingBean ,DisposableBean {
 
 	
 	private Point pointA;
 	private Point pointB;	
 	private Point pointC;
 	
-	
+	                                                                  
 	
 	public Point getPointA() {
 		return pointA;
@@ -43,7 +43,7 @@ public class Triangle   {
 		 
 		
 	}
-/*	@Override
+	@Override
 	public void destroy() throws Exception {
 		System.out.println("DisposableBean is used for destroy ");
 		
@@ -55,7 +55,7 @@ public class Triangle   {
 			
 	}
 
-	*/
+	
 	
 	public void myInit(){
 		
