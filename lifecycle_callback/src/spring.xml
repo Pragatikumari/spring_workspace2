@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+<bean id= "triangle"  class= "lifecycle_callback.Triangle"  autowire="byName" init-method="myInit"  destroy-method="mycleanup">
+ 
+ 
+</bean>
+
+<bean id= "pointA"  class="lifecycle_callback.Point">
+<property  name="X" value= "0"></property>
+<property  name="Y" value= "0"></property>
+
+
+</bean>
+
+
+
+    
+  <bean id= "pointB" class="lifecycle_callback.Point">
+     <property  name="X" value= "20"></property>
+     <property  name="Y" value= "0"></property>
+
+   </bean>
+    
+   <bean  id="pointC" class="lifecycle_callback.Point">
+     <property  name="X" value= "0"></property>
+      <property  name="Y" value= "20"></property>
+
+  </bean>
+
+
+</beans>
