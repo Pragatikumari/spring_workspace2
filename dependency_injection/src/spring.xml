@@ -19,7 +19,7 @@
 <property name="pointC" >
 
 
-   <bean id= "getpoint2"  class="dependency_injection.Point">
+   <bean   class="dependency_injection.Point">
      <property  name="X" value= "0"></property>
       <property  name="Y" value= "20"></property>
 
