@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+<bean id= "triangle"  class= "bean_postprocessor.Triangle"  autowire="byName"  >
+ 
+ 
+</bean>
+
+<bean id= "pointA"  class="bean_postprocessor.Point"  >
+<property  name="X" value= "0"></property>
+<property  name="Y" value= "0"></property>
+
+
+</bean>
+
+
+
+    
+  <bean id= "pointB" class="bean_postprocessor.Point"  >
+     <property  name="X" value= "20"></property>
+     <property  name="Y" value= "0"></property>
+
+   </bean>
+    
+   <bean  id="pointC" class="bean_postprocessor.Point"  >
+     <property  name="X" value= "0"></property>
+      <property  name="Y" value= "20"></property>
+
+  </bean>
+
+<bean   class="bean_postprocessor.postprocessor">
+
+</bean>
+
+
+</beans>
