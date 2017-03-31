@@ -25,7 +25,7 @@
  </bean>
 
 
- <!--  <bean id="pointB"   class= "autowire_annotation.Point" >
+  <bean id="pointB"   class= "autowire_annotation.Point" >
  <property name= "x"  value= "20"></property>
  <property name= "Y"  value= "0"></property>
  
@@ -36,6 +36,6 @@
  <property name= "Y"  value= "30"></property>
  
  </bean>
--->
+
 
 </beans>
