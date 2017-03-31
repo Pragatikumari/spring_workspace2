@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+ <!--  <bean id="triangle" class= "autowire_annotation.Triangle">
+ <property name= "pointA"   ref= "pointA"/>
+ <property name= "pointB"   ref= "pointB"/>
+ <property name= "pointC"   ref= "pointC"/>
+ 
+ 
+ 
+ </bean>-->
+ 
+ <bean id="circle"  class= "autowire_annotation.Circle">
+  
+ </bean>
+ 
+<!--   <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/> -->
+
+ <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+ <bean id="pointA"   class= "autowire_annotation.Point" >
+ <property name= "x"  value= "0"></property>
+ <property name= "Y"  value= "0"></property>
+ 
+ </bean>
+
+
+ <!--  <bean id="pointB"   class= "autowire_annotation.Point" >
+ <property name= "x"  value= "20"></property>
+ <property name= "Y"  value= "0"></property>
+ 
+ </bean>
+
+ <bean id="pointC"   class= "autowire_annotation.Point" >
+ <property name= "x"  value= "0"></property>
+ <property name= "Y"  value= "30"></property>
+ 
+ </bean>
+-->
+
+</beans>
