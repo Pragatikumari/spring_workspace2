@@ -4,16 +4,26 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
+
  
  
 public class Circle  implements Shape{
 
 	 private Point center;
+	 
+	 @Autowired
+	 private MessageSource messageSource;
 		
 		@Override
 		public void draw() {
-			System.out.println("In Circle");
+			//System.out.println("In Circle");
+			System.out.println(messageSource.getMessage("circle.draw",null,"default message for circle.draw",null));
+
 	        System.out.println("circle : center= ("+getCenter().getX()+","+getCenter().getY()+")");
+			System.out.println(messageSource.getMessage("greeting",null,"default message",null));
+
 
 		}
 
@@ -39,6 +49,14 @@ public class Circle  implements Shape{
 			System.out.println("in Circlr destroy");
 			
 		}
+
+	public MessageSource getMessageSource() {
+		return messageSource;
+	}
+
+	public void setMessageSource(MessageSource messageSource) {
+		this.messageSource = messageSource;
+	}
 	
 
 }
