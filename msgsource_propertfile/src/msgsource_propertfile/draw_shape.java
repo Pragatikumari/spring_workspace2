@@ -10,7 +10,7 @@ public class draw_shape {
 		ApplicationContext context= new ClassPathXmlApplicationContext("spring.xml");
 		Shape shape= (Shape)context.getBean("circle");
 		shape.draw();
-		System.out.println(context.getMessage("greeting",null,"default message",null));
+		//System.out.println(context.getMessage("greeting",null,"default message",null));
 
 	}
 

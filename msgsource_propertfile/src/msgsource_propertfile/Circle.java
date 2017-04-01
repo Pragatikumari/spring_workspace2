@@ -20,6 +20,7 @@ public class Circle  implements Shape{
 		public void draw() {
 			//System.out.println("In Circle");
 			System.out.println(messageSource.getMessage("circle.draw",null,"default message for circle.draw",null));
+			System.out.println(messageSource.getMessage("circle.point",new Object[] {getCenter().getX(), getCenter().getY() },"default message for circle.point",null));
 
 	        System.out.println("circle : center= ("+getCenter().getX()+","+getCenter().getY()+")");
 			System.out.println(messageSource.getMessage("greeting",null,"default message",null));
