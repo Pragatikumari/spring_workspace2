@@ -20,5 +20,8 @@
     <bean name="shapeService" class="aop_demo.service.ShapeService" autowire="byName" >
     </bean>
     
+    <aop:aspectj-autoproxy/>
+    
+    <bean name="loggingAspect" class="aop_demo.aspectj.LoggingAspect"   />
   
  </beans>
