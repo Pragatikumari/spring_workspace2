@@ -13,7 +13,7 @@ public class AopMain {
 		ApplicationContext cxt= new ClassPathXmlApplicationContext("spring.xml");   
 		ShapeService shape= cxt.getBean("shapeService",ShapeService.class);   //using .class removed the need of type casting the getBean to ShapeService
          
-		System.out.println(shape.getCircle().getName());
+		System.out.println(shape.getTriangle().getName());
 	
 	}
 
