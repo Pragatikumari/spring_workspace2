@@ -38,10 +38,10 @@ public class LoggingAspect {
 			}
 			
 		 
-		 @AfterThrowing("args(name)")
-			public void Afterthrowingexp(String name)
+		 @AfterThrowing(pointcut="args(name)", throwing="ex")
+			public void Afterthrowingexp(String name, RuntimeException ex)
 			{
-				System.out.println("After Throwing exception thrown");
+				System.out.println(" exception thrown is "+ex);
 				
 				
 			}
