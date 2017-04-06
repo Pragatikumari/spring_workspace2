@@ -29,10 +29,10 @@ public class LoggingAspect {
 		}
 		
 		 
-		 @AfterReturning("args(name)")
-			public void AfterretStringArg(String name)
+		 @AfterReturning(pointcut="args(name)" , returning="returnedString")
+			public void AfterretStringArg(String name, String returnedString)
 			{
-				System.out.println(name+"AfterReturning");
+				System.out.println(name+"AfterReturning"+" and name returned is "+returnedString);
 				
 				
 			}
