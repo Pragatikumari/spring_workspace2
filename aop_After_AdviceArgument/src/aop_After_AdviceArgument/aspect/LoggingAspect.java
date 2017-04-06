@@ -3,6 +3,7 @@ package aop_After_AdviceArgument.aspect;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -32,6 +33,15 @@ public class LoggingAspect {
 			public void AfterretStringArg(String name)
 			{
 				System.out.println(name+"AfterReturning");
+				
+				
+			}
+			
+		 
+		 @AfterThrowing("args(name)")
+			public void Afterthrowingexp(String name)
+			{
+				System.out.println("After Throwing exception thrown");
 				
 				
 			}
