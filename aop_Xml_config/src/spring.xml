@@ -24,9 +24,11 @@
     <aop:config>
       <aop:aspect id="loggingAspect" ref="loggingAspect">
       
-      <aop:pointcut expression="execution(public * get*())" id="allGETTERS"/>
+     <!--  - <aop:pointcut expression="execution(public * get*())" id="allGETTERS"/>
       <aop:around method="aroundAdvice" pointcut-ref="allGETTERS"/>
+      -->
       
+      <aop:around method="aroundAdvice" pointcut="execution(public * get*())"/>
      </aop:aspect>
     </aop:config>
   
